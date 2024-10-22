@@ -1,0 +1,68 @@
+:root {
+  --background: #ffffff; /* White background */
+  --foreground: #171717; /* Dark foreground */
+  --navbar-background: #f4f6f8; /* Light grey navbar */
+  --section-background: #fafafa; /* Off-white for sections */
+  --highlight-background: #f8f4ff; /* Light purple for specific areas */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --navbar-background: #1c1c1c; /* Dark grey for navbar in dark mode */
+    --section-background: #111111; /* Darker background for sections in dark mode */
+    --highlight-background: #302f4d; /* Dark purple highlight in dark mode */
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar {
+  background-color: var(--navbar-background);
+  height: 100%;
+  padding: 1rem;
+}
+
+.section {
+  background-color: var(--section-background);
+  padding: 2rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+}
+
+.highlight {
+  background-color: var(--highlight-background);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
